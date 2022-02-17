@@ -1,0 +1,3 @@
+/home/faegan/Documents/helloBrain/CMakeFiles/rebuild_cache.dir
+/home/faegan/Documents/helloBrain/CMakeFiles/edit_cache.dir
+/home/faegan/Documents/helloBrain/CMakeFiles/helloBrain.dir

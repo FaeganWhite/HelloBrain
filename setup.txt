@@ -1,0 +1,5 @@
+Sections - Yes, No
+Board ID - 5
+IP Port - 8000
+Time - 2
+Samples - 10
