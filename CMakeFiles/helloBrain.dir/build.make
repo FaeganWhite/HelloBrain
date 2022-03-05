@@ -79,27 +79,27 @@ include CMakeFiles/helloBrain.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/helloBrain.dir/flags.make
 
-CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o: CMakeFiles/helloBrain.dir/flags.make
-CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o: src/helloBrain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/faegan/Documents/helloBrain/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o -c /home/faegan/Documents/helloBrain/src/helloBrain.cpp
+CMakeFiles/helloBrain.dir/src/main.cpp.o: CMakeFiles/helloBrain.dir/flags.make
+CMakeFiles/helloBrain.dir/src/main.cpp.o: src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/faegan/Documents/helloBrain/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/helloBrain.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/helloBrain.dir/src/main.cpp.o -c /home/faegan/Documents/helloBrain/src/main.cpp
 
-CMakeFiles/helloBrain.dir/src/helloBrain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/helloBrain.dir/src/helloBrain.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/faegan/Documents/helloBrain/src/helloBrain.cpp > CMakeFiles/helloBrain.dir/src/helloBrain.cpp.i
+CMakeFiles/helloBrain.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/helloBrain.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/faegan/Documents/helloBrain/src/main.cpp > CMakeFiles/helloBrain.dir/src/main.cpp.i
 
-CMakeFiles/helloBrain.dir/src/helloBrain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/helloBrain.dir/src/helloBrain.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/faegan/Documents/helloBrain/src/helloBrain.cpp -o CMakeFiles/helloBrain.dir/src/helloBrain.cpp.s
+CMakeFiles/helloBrain.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/helloBrain.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/faegan/Documents/helloBrain/src/main.cpp -o CMakeFiles/helloBrain.dir/src/main.cpp.s
 
 # Object files for target helloBrain
 helloBrain_OBJECTS = \
-"CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o"
+"CMakeFiles/helloBrain.dir/src/main.cpp.o"
 
 # External object files for target helloBrain
 helloBrain_EXTERNAL_OBJECTS =
 
-helloBrain: CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o
+helloBrain: CMakeFiles/helloBrain.dir/src/main.cpp.o
 helloBrain: CMakeFiles/helloBrain.dir/build.make
 helloBrain: /home/faegan/Documents/brainflow-master/installed/lib/libBrainflow.a
 helloBrain: /home/faegan/Documents/brainflow-master/installed/lib/libMLModule.so

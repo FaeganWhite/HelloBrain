@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o"
+  "CMakeFiles/helloBrain.dir/src/main.cpp.o"
   "helloBrain"
   "helloBrain.pdb"
 )

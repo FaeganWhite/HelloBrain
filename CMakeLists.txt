@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.10)
-project (BRAINFLOW_GET_DATA)
+project (helloBrain)
 
-set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 set (CMAKE_VERBOSE_MAKEFILE ON)
 
 macro (configure_msvc_runtime)
@@ -50,10 +50,15 @@ find_package (
     brainflow CONFIG REQUIRED
 )
 
-add_executable (
-    helloBrain
-    src/helloBrain.cpp
-)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK4 REQUIRED gtk4)
+
+include_directories(${GTK4_INCLUDE_DIRS})
+link_directories(${GTK4_LIBRARY_DIRS})
+
+add_definitions(${GTK4_CFLAGS_OTHER})
+
+add_executable(helloBrain src/main.cpp)
 
 target_include_directories (
     helloBrain PUBLIC
@@ -67,4 +72,5 @@ target_link_libraries (
     ${MLModulePath}
     ${DataHandlerPath}
     ${BoardControllerPath}
+    ${GTK4_LIBRARIES}
 )

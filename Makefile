@@ -145,32 +145,32 @@ helloBrain/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloBrain.dir/build.make CMakeFiles/helloBrain.dir/build
 .PHONY : helloBrain/fast
 
-src/helloBrain.o: src/helloBrain.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : src/helloBrain.o
+.PHONY : src/main.o
 
 # target to build an object file
-src/helloBrain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloBrain.dir/build.make CMakeFiles/helloBrain.dir/src/helloBrain.cpp.o
-.PHONY : src/helloBrain.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloBrain.dir/build.make CMakeFiles/helloBrain.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-src/helloBrain.i: src/helloBrain.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : src/helloBrain.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-src/helloBrain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloBrain.dir/build.make CMakeFiles/helloBrain.dir/src/helloBrain.cpp.i
-.PHONY : src/helloBrain.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloBrain.dir/build.make CMakeFiles/helloBrain.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-src/helloBrain.s: src/helloBrain.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : src/helloBrain.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-src/helloBrain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloBrain.dir/build.make CMakeFiles/helloBrain.dir/src/helloBrain.cpp.s
-.PHONY : src/helloBrain.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloBrain.dir/build.make CMakeFiles/helloBrain.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -181,9 +181,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... helloBrain"
-	@echo "... src/helloBrain.o"
-	@echo "... src/helloBrain.i"
-	@echo "... src/helloBrain.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

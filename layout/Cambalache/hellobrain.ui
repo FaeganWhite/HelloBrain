@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.8.2 -->
+<interface>
+  <!-- interface-name hellobrain.ui -->
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkWindow" id="window">
+    <property name="default-height">960</property>
+    <property name="default-width">1280</property>
+    <child>
+      <object class="GtkBox">
+        <property name="homogeneous">True</property>
+        <child>
+          <object class="GtkBox">
+            <property name="homogeneous">True</property>
+            <property name="margin-bottom">20</property>
+            <property name="margin-end">10</property>
+            <property name="margin-start">10</property>
+            <property name="margin-top">20</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <property name="margin-bottom">5</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">IP Port: </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="port_field"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <property name="margin-bottom">5</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Frequency (Hz): </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="frequency_field"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkLabel" id="connect_label">
+                        <property name="label">Disconnected</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="connect_button">
+                        <property name="label">Connect</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <property name="margin-bottom">5</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Sample time (s):</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="sample_time_field"/>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Sample number: </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="sample_number_field"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Lexicon:</property>
+                    <property name="margin-bottom">5</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="lexicon_field"/>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="homogeneous">True</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Session name:</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="session_name_field"/>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkCheckButton" id="save_check">
+                    <property name="label">Save data</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="remove_end_check">
+                    <property name="label">Remove end samples</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="remove_outlier_check">
+                    <property name="label">Remove outlier samples</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="homogeneous">True</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkButton" id="start_button">
+                    <property name="label">Start</property>
+                    <property name="margin-end">6</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="pause_button">
+                    <property name="label">Pause</property>
+                    <property name="margin-end">3</property>
+                    <property name="margin-start">3</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="stop_button">
+                    <property name="label">Stop</property>
+                    <property name="margin-start">6</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkCheckButton" id="feedback_check">
+                    <property name="label">Show feedback bar</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="prompt_box">
+            <property name="css-name">prompt_box</property>
+            <property name="homogeneous">True</property>
+            <property name="margin-bottom">20</property>
+            <property name="margin-end">10</property>
+            <property name="margin-start">10</property>
+            <property name="margin-top">20</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="prompt_label">
+                <property name="label">...</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="margin-bottom">20</property>
+            <property name="margin-end">10</property>
+            <property name="margin-start">10</property>
+            <property name="margin-top">20</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkGrid">
+                <property name="column-homogeneous">True</property>
+                <property name="hexpand">True</property>
+                <property name="row-homogeneous">True</property>
+                <property name="vexpand">True</property>
+                <child>
+                  <object class="GtkImage" id="image_1">
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="column-span">1</property>
+                      <property name="row">0</property>
+                      <property name="row-span">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="image_2">
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="column-span">1</property>
+                      <property name="row">0</property>
+                      <property name="row-span">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="image_3">
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="column-span">1</property>
+                      <property name="row">1</property>
+                      <property name="row-span">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="image_5">
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="column-span">1</property>
+                      <property name="row">2</property>
+                      <property name="row-span">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="image_7">
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="image_8">
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="image_4">
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="column-span">1</property>
+                      <property name="row">1</property>
+                      <property name="row-span">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="image_6">
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="column-span">1</property>
+                      <property name="row">2</property>
+                      <property name="row-span">1</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="margin-bottom">10</property>
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkCheckButton" id="averaging_check">
+                    <property name="label">Averaging</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="filtering_check">
+                    <property name="label">Filtering</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <property name="valign">center</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Samples remaining:</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="remaining_samples_label">
+                        <property name="label">...</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="homogeneous">True</property>
+                    <property name="valign">center</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Time remaining:</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="remaining_time_label">
+                        <property name="label">...</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

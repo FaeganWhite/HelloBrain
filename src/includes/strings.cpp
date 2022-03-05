@@ -6,27 +6,26 @@
 #include <vector>
 using namespace std;
 
-// Split a string into a vector
-vector<string> split(string input, char splitter) {
+// Split a string into a vector of strings
+vector<string> split(string input, string delimiter) {
     // Establish the output
     vector<string> output;
-    // Var to store the current position in the loop
-    int pos = 0;
-    // var to store the last position of the splitter
-    int last_pos = 0;
-    // For each character in the input
-    for (char c : input) {
-        // If the character matches the splitter character
-        if (c == splitter or pos == input.length()-1) {
-            // Add the substring to the vector
-            output.push_back(input.substr(last_pos, pos));
-            // Update the last position
-            last_pos = pos+1;
-        }
-        // Increment the position
-        pos++;
+    // Set the start position
+    size_t position = 0;
+    // Establish a token string
+    string token;
+    // While the delimiter is present in the string
+    while ((position = input.find(delimiter)) != string::npos) {
+        // Get the token as the substring before the delimiter
+        token = input.substr(0, position);
+        // Add the token to the output vector
+        output.push_back(token);
+        // Erase the token from the inpuy
+        input.erase(0, position + delimiter.length());
     }
-    // Return the output
+    // Add the final token to the output
+    output.push_back(input);
+    // Return the outpu
     return output;
 }
 
@@ -64,6 +63,19 @@ string strip(string input) {
     return input.substr(start_pos, end_pos);
 }
 
+// Strip whitespace from a vector of strings
+vector<string> strip_vector(vector<string> input) {
+    // Establish the output
+    vector<string> output;
+    // For each string
+    for (string s : input) {
+        // Add the stripped string to the output
+        output.push_back(strip(s));
+    }
+    // Return the output
+    return output;
+}
+
 // Function to print a line of text
 void print(string message) {
     // Print a line of text
@@ -72,6 +84,12 @@ void print(string message) {
 
 // Function to print a line of text
 void print(int message) {
+    // Print a line of text
+    cout << message << endl;
+}
+
+// Function to print a line of text
+void print(double message) {
     // Print a line of text
     cout << message << endl;
 }
